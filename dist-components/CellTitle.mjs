@@ -1,8 +1,4 @@
-const _defineComponent = window["Vue"].defineComponent;
-const _toDisplayString = window["Vue"].toDisplayString;
-const _openBlock = window["Vue"].openBlock;
-const _createElementBlock = window["Vue"].createElementBlock;
-const _sfc_main = /* @__PURE__ */ _defineComponent({
+const n = window.Vue.defineComponent, o = window.Vue.toDisplayString, l = window.Vue.openBlock, t = window.Vue.createElementBlock, i = /* @__PURE__ */ n({
   __name: "CellTitle",
   props: {
     row: {},
@@ -10,13 +6,10 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     cell: {},
     cellValue: {}
   },
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return _openBlock(), _createElementBlock("h1", null, _toDisplayString(_ctx.cellValue), 1);
-    };
+  setup(c) {
+    return (e, r) => (l(), t("h1", null, o(e.cellValue), 1));
   }
 });
 export {
-  _sfc_main as default
+  i as default
 };
-//# sourceMappingURL=CellTitle.mjs.map

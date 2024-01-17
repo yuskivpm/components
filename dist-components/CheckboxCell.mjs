@@ -1,9 +1,5 @@
-import { _ as _sfc_main$1 } from "./select-de5f3f6d.mjs";
-const _defineComponent = window["Vue"].defineComponent;
-const _unref = window["Vue"].unref;
-const _openBlock = window["Vue"].openBlock;
-const _createBlock = window["Vue"].createBlock;
-const _sfc_main = /* @__PURE__ */ _defineComponent({
+import { _ as o } from "./select-770f830d.mjs";
+const n = window.Vue.defineComponent, l = window.Vue.unref, c = window.Vue.openBlock, r = window.Vue.createBlock, _ = /* @__PURE__ */ n({
   __name: "CheckboxCell",
   props: {
     row: {},
@@ -11,17 +7,14 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     cell: {},
     cellValue: { type: [String, Number, Boolean] }
   },
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return _openBlock(), _createBlock(_unref(_sfc_main$1), {
-        "model-value": Boolean(_ctx.cellValue),
-        readonly: "",
-        rounded: ""
-      }, null, 8, ["model-value"]);
-    };
+  setup(t) {
+    return (e, u) => (c(), r(l(o), {
+      "model-value": !!e.cellValue,
+      readonly: "",
+      rounded: ""
+    }, null, 8, ["model-value"]));
   }
 });
 export {
-  _sfc_main as default
+  _ as default
 };
-//# sourceMappingURL=CheckboxCell.mjs.map
