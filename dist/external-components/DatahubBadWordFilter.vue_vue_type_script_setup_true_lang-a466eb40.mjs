@@ -12,6 +12,8 @@ const BAD_WORDS_LIST = {
     }
   ]
 };
+const _useModel = window["Vue"].useModel;
+const _mergeModels = window["Vue"].mergeModels;
 const _defineComponent = window["Vue"].defineComponent;
 const _toDisplayString = window["Vue"].toDisplayString;
 const _createElementVNode = window["Vue"].createElementVNode;
@@ -28,7 +30,6 @@ const _mergeProps = window["Vue"].mergeProps;
 const _hoisted_1 = { class: "mr-2" };
 const computed = window["Vue"].computed;
 const ref = window["Vue"].ref;
-const useModel = window["Vue"].useModel;
 const watch = window["Vue"].watch;
 const ARow = window["ActindoCoreUI"].ARow;
 const ACol = window["ActindoCoreUI"].ACol;
@@ -38,17 +39,20 @@ const ATextField = window["ActindoCoreUI"].ATextField;
 const ActindoDataList = window["ActindoCoreUI"].ActindoDataList;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
   __name: "DatahubBadWordFilter",
-  props: {
-    modelValue: { default: () => [] },
+  props: _mergeModels({
     scopable: { type: Boolean },
     remoteScopes: { default: () => [] },
     multiLanguage: { type: Boolean },
     remoteLanguages: { default: () => [] }
-  },
+  }, {
+    "modelValue": {
+      default: () => []
+    }
+  }),
   emits: ["update:modelValue"],
   setup(__props) {
     const props = __props;
-    const badwords = useModel(props, "modelValue");
+    const badwords = _useModel(__props, "modelValue");
     const currentScopeId = ref();
     const currentLanguageId = ref();
     const hideBadWords = computed(
@@ -98,7 +102,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 class: "d-flex align-center"
               }, {
                 default: _withCtx(() => [
-                  _createElementVNode("h3", _hoisted_1, _toDisplayString(_ctx.$t("stringValue.badWords")), 1),
+                  _createElementVNode("strong", _hoisted_1, _toDisplayString(_ctx.$t("stringValue.badWords")), 1),
                   _ctx.scopable && _ctx.remoteScopes.length ? (_openBlock(), _createBlock(_unref(ASelect), {
                     key: 0,
                     modelValue: currentScopeId.value,
@@ -139,8 +143,8 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                     "cell-text": _withCtx(({ rowIndex }) => [
                       !hideBadWords.value ? (_openBlock(), _createBlock(_unref(ATextField), {
                         key: 0,
-                        modelValue: _unref(badwords)[currentScopeId.value][currentLanguageId.value][rowIndex],
-                        "onUpdate:modelValue": ($event) => _unref(badwords)[currentScopeId.value][currentLanguageId.value][rowIndex] = $event
+                        modelValue: badwords.value[currentScopeId.value][currentLanguageId.value][rowIndex],
+                        "onUpdate:modelValue": ($event) => badwords.value[currentScopeId.value][currentLanguageId.value][rowIndex] = $event
                       }, null, 8, ["modelValue", "onUpdate:modelValue"])) : _createCommentVNode("", true)
                     ]),
                     _: 1
@@ -160,4 +164,4 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
 export {
   _sfc_main as _
 };
-//# sourceMappingURL=DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-784cd056.mjs.map
+//# sourceMappingURL=DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-a466eb40.mjs.map
