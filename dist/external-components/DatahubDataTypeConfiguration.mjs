@@ -1,6 +1,5 @@
-import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-4aa50fe1.mjs";
-import "./DatahubDataTypeConfigurationStringValue.vue_vue_type_script_setup_true_lang-bbccb30a.mjs";
-import "./DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-a466eb40.mjs";
+import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-5495806f.mjs";
+import "./DatahubDataTypeConfigurationIntegerValue.vue_vue_type_script_setup_true_lang-77118135.mjs";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;

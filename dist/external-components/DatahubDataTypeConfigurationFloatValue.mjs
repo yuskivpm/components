@@ -1,4 +1,3 @@
-import { _ as _sfc_main$1 } from "./DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-a466eb40.mjs";
 const _useModel = window["Vue"].useModel;
 const _mergeModels = window["Vue"].mergeModels;
 const _defineComponent = window["Vue"].defineComponent;
@@ -12,7 +11,7 @@ const ACol = window["ActindoCoreUI"].ACol;
 const ACheckbox = window["ActindoCoreUI"].ACheckbox;
 const ATextField = window["ActindoCoreUI"].ATextField;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
-  __name: "DatahubDataTypeConfigurationStringValue",
+  __name: "DatahubDataTypeConfigurationFloatValue",
   props: _mergeModels({
     dataTypeInstance: {},
     remoteScopes: {},
@@ -28,10 +27,23 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
             _createVNode(_unref(ATextField), {
-              modelValue: configuration.value.min,
-              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => configuration.value.min = $event),
+              modelValue: configuration.value.precision,
+              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => configuration.value.precision = $event),
               modelModifiers: { number: true },
-              label: _ctx.$t("stringValue.minLength")
+              label: _ctx.$t("stringValue.precision"),
+              type: "number"
+            }, null, 8, ["modelValue", "label"])
+          ]),
+          _: 1
+        }),
+        _createVNode(_unref(ACol), null, {
+          default: _withCtx(() => [
+            _createVNode(_unref(ATextField), {
+              modelValue: configuration.value.min,
+              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => configuration.value.min = $event),
+              modelModifiers: { number: true },
+              label: _ctx.$t("stringValue.minLength"),
+              type: "number"
             }, null, 8, ["modelValue", "label"])
           ]),
           _: 1
@@ -40,19 +52,10 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
           default: _withCtx(() => [
             _createVNode(_unref(ATextField), {
               modelValue: configuration.value.max,
-              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => configuration.value.max = $event),
+              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => configuration.value.max = $event),
               modelModifiers: { number: true },
-              label: _ctx.$t("stringValue.maxLength")
-            }, null, 8, ["modelValue", "label"])
-          ]),
-          _: 1
-        }),
-        _createVNode(_unref(ACol), null, {
-          default: _withCtx(() => [
-            _createVNode(_unref(ATextField), {
-              modelValue: configuration.value.regex,
-              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => configuration.value.regex = $event),
-              label: _ctx.$t("stringValue.regex")
+              label: _ctx.$t("stringValue.maxLength"),
+              type: "number"
             }, null, 8, ["modelValue", "label"])
           ]),
           _: 1
@@ -66,20 +69,12 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
             }, null, 8, ["modelValue", "label"])
           ]),
           _: 1
-        }),
-        _createVNode(_sfc_main$1, {
-          modelValue: configuration.value.badwords,
-          "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => configuration.value.badwords = $event),
-          scopable: _ctx.dataTypeInstance.scopable,
-          "remote-scopes": _ctx.remoteScopes,
-          "multi-language": _ctx.dataTypeInstance.multilanguage,
-          "remote-languages": _ctx.remoteLanguages
-        }, null, 8, ["modelValue", "scopable", "remote-scopes", "multi-language", "remote-languages"])
+        })
       ], 64);
     };
   }
 });
 export {
-  _sfc_main as _
+  _sfc_main as default
 };
-//# sourceMappingURL=DatahubDataTypeConfigurationStringValue.vue_vue_type_script_setup_true_lang-bbccb30a.mjs.map
+//# sourceMappingURL=DatahubDataTypeConfigurationFloatValue.mjs.map

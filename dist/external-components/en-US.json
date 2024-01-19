@@ -1,6 +1,7 @@
 {
   "stringValue": {
     "configurationHeading": "Configuration",
+    "precision": "Precision",
     "minLength": "Min length",
     "maxLength": "Max length",
     "regex": "Regex",
