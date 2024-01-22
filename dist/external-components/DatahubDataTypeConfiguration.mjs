@@ -1,5 +1,4 @@
-import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-5495806f.mjs";
-import "./DatahubDataTypeConfigurationIntegerValue.vue_vue_type_script_setup_true_lang-77118135.mjs";
+import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-41d3faf7.mjs";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -599,6 +598,7 @@ const AContainer = window["ActindoCoreUI"].AContainer;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
   __name: "DatahubDataTypeConfiguration",
   props: _mergeModels({
+    attribute: {},
     dataTypeInstance: {},
     remoteScopes: {},
     remoteLanguages: {}
@@ -610,9 +610,10 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     const props = __props;
     const configuration = _useModel(__props, "modelValue");
     onMounted(() => {
+      var _a;
       if (!configuration.value) {
         configuration.value = clonedeep(
-          props.dataTypeInstance.defaultConfiguration
+          ((_a = props.attribute) == null ? void 0 : _a.configuration) ?? props.dataTypeInstance.defaultConfiguration
         );
       }
     });
@@ -631,10 +632,11 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 modelValue: configuration.value,
                 "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => configuration.value = $event),
                 type: _unref(DATAHUB_COMPONENT_TYPE).CONFIG,
+                attribute: _ctx.attribute,
                 "data-type-instance": _ctx.dataTypeInstance,
                 "remote-scopes": _ctx.remoteScopes,
                 "remote-languages": _ctx.remoteLanguages
-              }, null, 8, ["modelValue", "type", "data-type-instance", "remote-scopes", "remote-languages"])
+              }, null, 8, ["modelValue", "type", "attribute", "data-type-instance", "remote-scopes", "remote-languages"])
             ]),
             _: 1
           })) : _createCommentVNode("", true)

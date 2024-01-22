@@ -1,4 +1,4 @@
-import { _ as _sfc_main$1 } from "./DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-a466eb40.mjs";
+import { _ as _sfc_main$1 } from "./DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-f6c97c84.mjs";
 const _useModel = window["Vue"].useModel;
 const _mergeModels = window["Vue"].mergeModels;
 const _defineComponent = window["Vue"].defineComponent;
@@ -14,6 +14,7 @@ const ATextField = window["ActindoCoreUI"].ATextField;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
   __name: "DatahubDataTypeConfigurationStringValue",
   props: _mergeModels({
+    attribute: {},
     dataTypeInstance: {},
     remoteScopes: {},
     remoteLanguages: {}
@@ -24,6 +25,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
   setup(__props) {
     const configuration = _useModel(__props, "modelValue");
     return (_ctx, _cache) => {
+      var _a, _b;
       return _openBlock(), _createElementBlock(_Fragment, null, [
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
@@ -72,9 +74,9 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         _createVNode(_sfc_main$1, {
           modelValue: configuration.value.badwords,
           "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => configuration.value.badwords = $event),
-          scopable: _ctx.dataTypeInstance.scopable,
+          scopable: ((_a = _ctx.attribute) == null ? void 0 : _a.scopable) ?? _ctx.dataTypeInstance.scopable,
           "remote-scopes": _ctx.remoteScopes,
-          "multi-language": _ctx.dataTypeInstance.multilanguage,
+          "multi-language": ((_b = _ctx.attribute) == null ? void 0 : _b.multilanguage) ?? _ctx.dataTypeInstance.multilanguage,
           "remote-languages": _ctx.remoteLanguages
         }, null, 8, ["modelValue", "scopable", "remote-scopes", "multi-language", "remote-languages"])
       ], 64);

@@ -40,21 +40,22 @@ const ActindoDataList = window["ActindoCoreUI"].ActindoDataList;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
   __name: "DatahubBadWordFilter",
   props: _mergeModels({
+    modelValue: {},
     scopable: { type: Boolean },
     remoteScopes: { default: () => [] },
     multiLanguage: { type: Boolean },
     remoteLanguages: { default: () => [] }
   }, {
     "modelValue": {
-      default: () => []
+      default: () => ({})
     }
   }),
   emits: ["update:modelValue"],
   setup(__props) {
     const props = __props;
     const badwords = _useModel(__props, "modelValue");
-    const currentScopeId = ref();
-    const currentLanguageId = ref();
+    const currentScopeId = ref(0);
+    const currentLanguageId = ref(0);
     const hideBadWords = computed(
       () => props.multiLanguage && !currentLanguageId.value || props.scopable && !currentScopeId.value
     );
@@ -66,16 +67,16 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     );
     watch(
       [currentScopeId, currentLanguageId],
-      ([currentScope = 0, currentLanguage = 0]) => {
-        if (!badwords.value) {
-          badwords.value = [];
+      ([currentScope, currentLanguage]) => {
+        const badWordsAsArray = badwords.value instanceof Array && badwords.value.length === 1 && badwords.value[0].length === 1;
+        const value = badWordsAsArray ? { 0: { 0: badwords.value[0][0] } } : badwords.value;
+        if (!value[currentScope]) {
+          value[currentScope] = {};
         }
-        if (!badwords.value[currentScope]) {
-          badwords.value[currentScope] = {};
+        if (!value[currentScope][currentLanguage]) {
+          value[currentScope][currentLanguage] = [""];
         }
-        if (!badwords.value[currentScope][currentLanguage]) {
-          badwords.value[currentScope][currentLanguage] = [""];
-        }
+        badwords.value = value;
       },
       { immediate: true }
     );
@@ -141,11 +142,10 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                     onRemove: deleteWord
                   }), {
                     "cell-text": _withCtx(({ rowIndex }) => [
-                      !hideBadWords.value ? (_openBlock(), _createBlock(_unref(ATextField), {
-                        key: 0,
+                      _createVNode(_unref(ATextField), {
                         modelValue: badwords.value[currentScopeId.value][currentLanguageId.value][rowIndex],
                         "onUpdate:modelValue": ($event) => badwords.value[currentScopeId.value][currentLanguageId.value][rowIndex] = $event
-                      }, null, 8, ["modelValue", "onUpdate:modelValue"])) : _createCommentVNode("", true)
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
                     ]),
                     _: 1
                   }, 16, ["data", "create-actions"]))
@@ -164,4 +164,4 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
 export {
   _sfc_main as _
 };
-//# sourceMappingURL=DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-a466eb40.mjs.map
+//# sourceMappingURL=DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-f6c97c84.mjs.map

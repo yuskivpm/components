@@ -1,4 +1,3 @@
-import { _ as _sfc_main$1 } from "./DatahubDataTypeConfigurationIntegerValue.vue_vue_type_script_setup_true_lang-77118135.mjs";
 var DATAHUB_COMPONENT_TYPE = /* @__PURE__ */ ((DATAHUB_COMPONENT_TYPE2) => {
   DATAHUB_COMPONENT_TYPE2[DATAHUB_COMPONENT_TYPE2["RENDER"] = 0] = "RENDER";
   DATAHUB_COMPONENT_TYPE2[DATAHUB_COMPONENT_TYPE2["VALUE"] = 1] = "VALUE";
@@ -7,16 +6,17 @@ var DATAHUB_COMPONENT_TYPE = /* @__PURE__ */ ((DATAHUB_COMPONENT_TYPE2) => {
 })(DATAHUB_COMPONENT_TYPE || {});
 const MOCKED_CONFIGS = {
   // "Actindo\\Modules\\Actindo\\DataHub\\DataTypes\\StringValue": {
-  //   configurationComponent: "datahub-data-type-configuration-float-value",
+  //   configurationComponent: "datahub-data-type-configuration-string-value",
   //   configurationImportPath:
-  //     "https://yuskivpm.github.io/components/dist/external-components/DatahubDataTypeConfigurationFloatValue.mjs",
-  //   configComponent: DatahubDataTypeConfigurationFloatValue,
+  //     "https://yuskivpm.github.io/components/dist/external-components/DatahubDataTypeConfigurationStringValue.mjs",
+  //   configComponent: DatahubDataTypeConfigurationStringValue,
   // },
-  "Actindo\\Modules\\Actindo\\DataHub\\DataTypes\\IntegerValue": {
-    configurationComponent: "datahub-data-type-configuration-integer-value",
-    configurationImportPath: "https://yuskivpm.github.io/components/dist/external-components/DatahubDataTypeConfigurationIndegerValue.mjs",
-    configComponent: _sfc_main$1
-  }
+  // "Actindo\\Modules\\Actindo\\DataHub\\DataTypes\\IntegerValue": {
+  //   configurationComponent: "datahub-data-type-configuration-integer-value",
+  //   configurationImportPath:
+  //     "https://yuskivpm.github.io/components/dist/external-components/DatahubDataTypeConfigurationIndegerValue.mjs",
+  //   configComponent: DatahubDataTypeConfigurationIntegerValue,
+  // },
 };
 const _useModel = window["Vue"].useModel;
 const _mergeModels = window["Vue"].mergeModels;
@@ -40,14 +40,22 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     const props = __props;
     const value = _useModel(__props, "modelValue");
     const RequestedComponent = computed(() => {
-      var _a, _b, _c;
+      var _a, _b, _c, _d, _e, _f, _g;
       if (MOCKED_CONFIGS[(_a = props.dataTypeInstance) == null ? void 0 : _a.id]) {
         switch (props.type) {
           case DATAHUB_COMPONENT_TYPE.CONFIG:
-            return MOCKED_CONFIGS[(_b = props.dataTypeInstance) == null ? void 0 : _b.id].configComponent;
+            if (MOCKED_CONFIGS[(_b = props.dataTypeInstance) == null ? void 0 : _b.id]) {
+              if (MOCKED_CONFIGS[(_c = props.dataTypeInstance) == null ? void 0 : _c.id].configComponent) {
+                return MOCKED_CONFIGS[(_d = props.dataTypeInstance) == null ? void 0 : _d.id].configComponent;
+              }
+              return getExternalComponent({
+                name: MOCKED_CONFIGS[(_e = props.dataTypeInstance) == null ? void 0 : _e.id].configurationComponent,
+                url: MOCKED_CONFIGS[(_f = props.dataTypeInstance) == null ? void 0 : _f.id].configurationImportPath
+              });
+            }
         }
       }
-      if (!((_c = props.dataTypeInstance) == null ? void 0 : _c.vueComponents)) {
+      if (!((_g = props.dataTypeInstance) == null ? void 0 : _g.vueComponents)) {
         return null;
       }
       switch (props.type) {
@@ -83,4 +91,4 @@ export {
   DATAHUB_COMPONENT_TYPE as D,
   _sfc_main as _
 };
-//# sourceMappingURL=DatahubExternalComponent.vue_vue_type_script_setup_true_lang-5495806f.mjs.map
+//# sourceMappingURL=DatahubExternalComponent.vue_vue_type_script_setup_true_lang-41d3faf7.mjs.map
