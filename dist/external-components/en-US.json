@@ -1,4 +1,57 @@
 {
+  "lang-scopes": {
+    "scopes": "Selected channels:",
+    "languages": "Selected languages:",
+    "showAll": "Show all"
+  },
+  "offerRelationValue": {
+    "minRelations": "Min relations",
+    "maxRelations": "Max relations"
+  },
+  "files": {
+    "prefixField": "Field for filename prefix",
+    "prefixHint": "For example 'id'. An uploaded files will then be renamed from 'doc.pdf' to '442_doc.pdf' given an entity id of 442. For example, product files are next to each other in a folder structure",
+    "minFiles": "Min number of files",
+    "maxFiles": "Max number of files",
+    "supportedFileTypes": "Allowed file extensions",
+    "supportedFileTypesHint": "For example 'pdf'"
+  },
+  "images": {
+    "prefixField": "Field for filename prefix",
+    "prefixHint": "For example 'id'. An uploaded image will then be renamed from 'image1.jpg' to '442_image1.jpg' given an entity id of 442. For example, images are next to each other in a folder structure",
+    "minImages": "Min number of images",
+    "maxImages": "Max number of images",
+    "supportedFileTypes": "Allowed file extensions",
+    "supportedFileTypesHint": "For example 'jpg'"
+  },
+  "simplePricing": {
+    "isGross": "Gross prices",
+    "msrp": "Show MSRP field",
+    "promotions": "Use Promotions",
+    "currency": "Currency"
+  },
+  "unitValue": {
+    "dimension": "Dimension",
+    "defaultUnit": "Default unit"
+  },
+  "textField": {
+    "rows": "Rows",
+    "isEditor": "HTML Editor"
+  },
+  "dateTime": {
+    "dateFormat": "Date format",
+    "timeFormat": "Time format",
+    "dateFormatNone": "Do not show date",
+    "dateFormatShort": "Short (e.g. 02/11/2019)",
+    "dateFormatMedium": "Medium (e.g. February 11, 2019)",
+    "dateFormatLong": "Long (e.g. Monday, February 11, 2019)",
+    "timeFormatNone": "Do not show time",
+    "timeFormatShort": "Short (e.g. 09:00 PM)",
+    "timeFormatMedium": "Medium (e.g. 09:00:00 PM)"
+  },
+  "doubleFloat": {
+    "separator": "Separator"
+  },
   "stringValue": {
     "configurationHeading": "Configuration",
     "precision": "Precision",

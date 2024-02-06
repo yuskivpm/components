@@ -1,2 +1,20 @@
 {
+  "lang-scopes": {
+    "scopes": "Selected channels:",
+    "languages": "Selected languages:",
+    "showAll": "Show all"
+  },
+  "stringValue": {
+    "configurationHeading": "Configuration",
+    "precision": "Precision",
+    "minLength": "Min length",
+    "maxLength": "Max length",
+    "regex": "Regex",
+    "readOnly": "Read only",
+    "addWord": "Add word",
+    "badWords": "Bad Words",
+    "scope": "Scope",
+    "language": "Language",
+    "wrongScopeLanguage": "Please select a valid scope and language combination to edit bad words"
+  }
 }

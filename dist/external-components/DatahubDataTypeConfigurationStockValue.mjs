@@ -11,7 +11,7 @@ const ACol = window["ActindoCoreUI"].ACol;
 const ACheckbox = window["ActindoCoreUI"].ACheckbox;
 const ATextField = window["ActindoCoreUI"].ATextField;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
-  __name: "DatahubDataTypeConfigurationFloatValue",
+  __name: "DatahubDataTypeConfigurationStockValue",
   props: _mergeModels({
     dataTypeInstance: {},
     remoteScopes: {},
@@ -19,10 +19,8 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     readonly: { type: Boolean }
   }, {
     "modelValue": {
-      set: ({ max, min, precision, ...rest }) => ({
+      set: ({ precision, ...rest }) => ({
         precision: Number(precision),
-        max: Number(max),
-        min: Number(min),
         ...rest
       })
     }
@@ -47,35 +45,9 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         }),
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
-            _createVNode(_unref(ATextField), {
-              modelValue: configuration.value.min,
-              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => configuration.value.min = $event),
-              modelModifiers: { number: true },
-              label: _ctx.$t("stringValue.minLength"),
-              type: "number",
-              readonly: _ctx.readonly
-            }, null, 8, ["modelValue", "label", "readonly"])
-          ]),
-          _: 1
-        }),
-        _createVNode(_unref(ACol), null, {
-          default: _withCtx(() => [
-            _createVNode(_unref(ATextField), {
-              modelValue: configuration.value.max,
-              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => configuration.value.max = $event),
-              modelModifiers: { number: true },
-              label: _ctx.$t("stringValue.maxLength"),
-              type: "number",
-              readonly: _ctx.readonly
-            }, null, 8, ["modelValue", "label", "readonly"])
-          ]),
-          _: 1
-        }),
-        _createVNode(_unref(ACol), null, {
-          default: _withCtx(() => [
             _createVNode(_unref(ACheckbox), {
               modelValue: configuration.value.readOnly,
-              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => configuration.value.readOnly = $event),
+              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => configuration.value.readOnly = $event),
               label: _ctx.$t("stringValue.readOnly"),
               readonly: _ctx.readonly
             }, null, 8, ["modelValue", "label", "readonly"])
@@ -89,4 +61,4 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
 export {
   _sfc_main as default
 };
-//# sourceMappingURL=DatahubDataTypeConfigurationFloatValue.mjs.map
+//# sourceMappingURL=DatahubDataTypeConfigurationStockValue.mjs.map

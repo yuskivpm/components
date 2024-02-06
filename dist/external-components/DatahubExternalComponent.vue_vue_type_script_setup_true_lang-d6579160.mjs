@@ -1,15 +1,10 @@
-var DATAHUB_COMPONENT_TYPE = /* @__PURE__ */ ((DATAHUB_COMPONENT_TYPE2) => {
-  DATAHUB_COMPONENT_TYPE2[DATAHUB_COMPONENT_TYPE2["RENDER"] = 0] = "RENDER";
-  DATAHUB_COMPONENT_TYPE2[DATAHUB_COMPONENT_TYPE2["VALUE"] = 1] = "VALUE";
-  DATAHUB_COMPONENT_TYPE2[DATAHUB_COMPONENT_TYPE2["CONFIG"] = 2] = "CONFIG";
-  return DATAHUB_COMPONENT_TYPE2;
-})(DATAHUB_COMPONENT_TYPE || {});
+import { D as DATAHUB_COMPONENT_TYPE } from "./constants-9833f845.mjs";
 const MOCKED_CONFIGS = {
   // "Actindo\\Modules\\Actindo\\DataHub\\DataTypes\\StringValue": {
   //   configurationComponent: "datahub-data-type-configuration-string-value",
   //   configurationImportPath:
   //     "https://yuskivpm.github.io/components/dist/external-components/DatahubDataTypeConfigurationStringValue.mjs",
-  //   configComponent: DatahubDataTypeConfigurationStringValue,
+  //   configComponent: ConfigComponent,
   // },
   // "Actindo\\Modules\\Actindo\\DataHub\\DataTypes\\IntegerValue": {
   //   configurationComponent: "datahub-data-type-configuration-integer-value",
@@ -88,7 +83,6 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
   }
 });
 export {
-  DATAHUB_COMPONENT_TYPE as D,
   _sfc_main as _
 };
-//# sourceMappingURL=DatahubExternalComponent.vue_vue_type_script_setup_true_lang-41d3faf7.mjs.map
+//# sourceMappingURL=DatahubExternalComponent.vue_vue_type_script_setup_true_lang-d6579160.mjs.map

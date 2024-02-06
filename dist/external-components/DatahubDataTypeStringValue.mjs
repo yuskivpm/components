@@ -1,3 +1,5 @@
+window["ActindoCoreUI"].httpClient;
+window["VueI18n"].useI18n;
 const getFormElementLabel = (languageName, scopeName, attribute) => {
   let ret = attribute.name;
   if (!attribute.scopable && !attribute.multilanguage) {

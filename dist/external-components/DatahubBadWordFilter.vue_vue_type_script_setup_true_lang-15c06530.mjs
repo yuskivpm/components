@@ -44,7 +44,8 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     scopable: { type: Boolean },
     remoteScopes: { default: () => [] },
     multiLanguage: { type: Boolean },
-    remoteLanguages: { default: () => [] }
+    remoteLanguages: { default: () => [] },
+    readonly: { type: Boolean }
   }, {
     "modelValue": {
       default: () => ({})
@@ -94,7 +95,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
       badwords.value[currentScopeId.value][currentLanguageId.value].push("");
     }
     return (_ctx, _cache) => {
-      return _openBlock(), _createBlock(_unref(AContainer), null, {
+      return _openBlock(), _createBlock(_unref(AContainer), { fluid: "" }, {
         default: _withCtx(() => [
           _createVNode(_unref(ARow), null, {
             default: _withCtx(() => [
@@ -110,20 +111,24 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                     "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => currentScopeId.value = $event),
                     items: _ctx.remoteScopes,
                     label: _ctx.$t("stringValue.scope"),
+                    readonly: _ctx.readonly,
+                    disabled: _ctx.readonly,
                     "item-title": "name",
                     "item-value": "id",
                     class: "mr-2"
-                  }, null, 8, ["modelValue", "items", "label"])) : _createCommentVNode("", true),
+                  }, null, 8, ["modelValue", "items", "label", "readonly", "disabled"])) : _createCommentVNode("", true),
                   _ctx.multiLanguage && _ctx.remoteLanguages.length ? (_openBlock(), _createBlock(_unref(ASelect), {
                     key: 1,
                     modelValue: currentLanguageId.value,
                     "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => currentLanguageId.value = $event),
                     items: _ctx.remoteLanguages,
                     label: _ctx.$t("stringValue.language"),
+                    readonly: _ctx.readonly,
+                    disabled: _ctx.readonly,
                     "item-title": "description",
                     "item-value": "id",
                     class: "mr-2"
-                  }, null, 8, ["modelValue", "items", "label"])) : _createCommentVNode("", true)
+                  }, null, 8, ["modelValue", "items", "label", "readonly", "disabled"])) : _createCommentVNode("", true)
                 ]),
                 _: 1
               }),
@@ -134,9 +139,10 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                   ], 64)) : (_openBlock(), _createBlock(_unref(ActindoDataList), _mergeProps({
                     key: 1,
                     data: activeBadWords.value,
-                    "create-actions": [
+                    "create-actions": _ctx.readonly || [
                       { title: _ctx.$t("stringValue.addWord"), icon: "add_circle" }
-                    ]
+                    ],
+                    readonly: _ctx.readonly
                   }, _unref(BAD_WORDS_LIST), {
                     onCreate: addWord,
                     onRemove: deleteWord
@@ -144,11 +150,12 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                     "cell-text": _withCtx(({ rowIndex }) => [
                       _createVNode(_unref(ATextField), {
                         modelValue: badwords.value[currentScopeId.value][currentLanguageId.value][rowIndex],
-                        "onUpdate:modelValue": ($event) => badwords.value[currentScopeId.value][currentLanguageId.value][rowIndex] = $event
-                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                        "onUpdate:modelValue": ($event) => badwords.value[currentScopeId.value][currentLanguageId.value][rowIndex] = $event,
+                        readonly: _ctx.readonly
+                      }, null, 8, ["modelValue", "onUpdate:modelValue", "readonly"])
                     ]),
                     _: 1
-                  }, 16, ["data", "create-actions"]))
+                  }, 16, ["data", "create-actions", "readonly"]))
                 ]),
                 _: 1
               })
@@ -164,4 +171,4 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
 export {
   _sfc_main as _
 };
-//# sourceMappingURL=DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-f6c97c84.mjs.map
+//# sourceMappingURL=DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-15c06530.mjs.map

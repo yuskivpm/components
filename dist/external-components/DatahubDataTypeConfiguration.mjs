@@ -1,4 +1,5 @@
-import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-41d3faf7.mjs";
+import { D as DATAHUB_COMPONENT_TYPE } from "./constants-9833f845.mjs";
+import { _ as _sfc_main$1 } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-d6579160.mjs";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -601,7 +602,8 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     attribute: {},
     dataTypeInstance: {},
     remoteScopes: {},
-    remoteLanguages: {}
+    remoteLanguages: {},
+    readonly: { type: Boolean }
   }, {
     "modelValue": {}
   }),
@@ -618,7 +620,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
       }
     });
     return (_ctx, _cache) => {
-      return _openBlock(), _createBlock(_unref(AContainer), null, {
+      return _openBlock(), _createBlock(_unref(AContainer), { fluid: "" }, {
         default: _withCtx(() => [
           configuration.value ? (_openBlock(), _createBlock(_unref(ARow), { key: 0 }, {
             default: _withCtx(() => [
@@ -635,8 +637,9 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 attribute: _ctx.attribute,
                 "data-type-instance": _ctx.dataTypeInstance,
                 "remote-scopes": _ctx.remoteScopes,
-                "remote-languages": _ctx.remoteLanguages
-              }, null, 8, ["modelValue", "type", "attribute", "data-type-instance", "remote-scopes", "remote-languages"])
+                "remote-languages": _ctx.remoteLanguages,
+                readonly: _ctx.readonly
+              }, null, 8, ["modelValue", "type", "attribute", "data-type-instance", "remote-scopes", "remote-languages", "readonly"])
             ]),
             _: 1
           })) : _createCommentVNode("", true)

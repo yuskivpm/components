@@ -1,4 +1,3 @@
-import { _ as _sfc_main$1 } from "./DatahubBadWordFilter.vue_vue_type_script_setup_true_lang-15c06530.mjs";
 const _useModel = window["Vue"].useModel;
 const _mergeModels = window["Vue"].mergeModels;
 const _defineComponent = window["Vue"].defineComponent;
@@ -12,7 +11,7 @@ const ACol = window["ActindoCoreUI"].ACol;
 const ACheckbox = window["ActindoCoreUI"].ACheckbox;
 const ATextField = window["ActindoCoreUI"].ATextField;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
-  __name: "DatahubDataTypeConfigurationStringValue",
+  __name: "DatahubDataTypeConfigurationImageValue",
   props: _mergeModels({
     attribute: {},
     dataTypeInstance: {},
@@ -21,9 +20,9 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     readonly: { type: Boolean }
   }, {
     "modelValue": {
-      set: ({ max, min, ...rest }) => ({
-        max: Number(max),
-        min: Number(min),
+      set: ({ maxImages, minImages, ...rest }) => ({
+        maxImages: Number(maxImages),
+        minImages: Number(minImages),
         ...rest
       })
     }
@@ -32,15 +31,27 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
   setup(__props) {
     const configuration = _useModel(__props, "modelValue");
     return (_ctx, _cache) => {
-      var _a, _b;
       return _openBlock(), _createElementBlock(_Fragment, null, [
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
             _createVNode(_unref(ATextField), {
-              modelValue: configuration.value.min,
-              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => configuration.value.min = $event),
+              modelValue: configuration.value.prefixField,
+              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => configuration.value.prefixField = $event),
+              label: _ctx.$t("images.prefixField"),
+              readonly: _ctx.readonly,
+              hint: _ctx.$t("images.prefixHint"),
+              "persistent-hint": ""
+            }, null, 8, ["modelValue", "label", "readonly", "hint"])
+          ]),
+          _: 1
+        }),
+        _createVNode(_unref(ACol), null, {
+          default: _withCtx(() => [
+            _createVNode(_unref(ATextField), {
+              modelValue: configuration.value.minImages,
+              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => configuration.value.minImages = $event),
               modelModifiers: { number: true },
-              label: _ctx.$t("stringValue.minLength"),
+              label: _ctx.$t("images.minImages"),
               type: "number",
               readonly: _ctx.readonly
             }, null, 8, ["modelValue", "label", "readonly"])
@@ -50,10 +61,10 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
             _createVNode(_unref(ATextField), {
-              modelValue: configuration.value.max,
-              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => configuration.value.max = $event),
+              modelValue: configuration.value.maxImages,
+              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => configuration.value.maxImages = $event),
               modelModifiers: { number: true },
-              label: _ctx.$t("stringValue.maxLength"),
+              label: _ctx.$t("images.maxImages"),
               type: "number",
               readonly: _ctx.readonly
             }, null, 8, ["modelValue", "label", "readonly"])
@@ -63,11 +74,13 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
             _createVNode(_unref(ATextField), {
-              modelValue: configuration.value.regex,
-              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => configuration.value.regex = $event),
-              label: _ctx.$t("stringValue.regex"),
-              readonly: _ctx.readonly
-            }, null, 8, ["modelValue", "label", "readonly"])
+              modelValue: configuration.value.supportedFileTypes,
+              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => configuration.value.supportedFileTypes = $event),
+              label: _ctx.$t("images.supportedFileTypes"),
+              readonly: _ctx.readonly,
+              hint: _ctx.$t("images.supportedFileTypesHint"),
+              "persistent-hint": ""
+            }, null, 8, ["modelValue", "label", "readonly", "hint"])
           ]),
           _: 1
         }),
@@ -75,22 +88,13 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
           default: _withCtx(() => [
             _createVNode(_unref(ACheckbox), {
               modelValue: configuration.value.readOnly,
-              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => configuration.value.readOnly = $event),
+              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => configuration.value.readOnly = $event),
               label: _ctx.$t("stringValue.readOnly"),
               readonly: _ctx.readonly
             }, null, 8, ["modelValue", "label", "readonly"])
           ]),
           _: 1
-        }),
-        _createVNode(_sfc_main$1, {
-          modelValue: configuration.value.badwords,
-          "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => configuration.value.badwords = $event),
-          scopable: ((_a = _ctx.attribute) == null ? void 0 : _a.scopable) ?? _ctx.dataTypeInstance.scopable,
-          "remote-scopes": _ctx.remoteScopes,
-          "multi-language": ((_b = _ctx.attribute) == null ? void 0 : _b.multilanguage) ?? _ctx.dataTypeInstance.multilanguage,
-          "remote-languages": _ctx.remoteLanguages,
-          readonly: _ctx.readonly
-        }, null, 8, ["modelValue", "scopable", "remote-scopes", "multi-language", "remote-languages", "readonly"])
+        })
       ], 64);
     };
   }
@@ -98,4 +102,4 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
 export {
   _sfc_main as default
 };
-//# sourceMappingURL=DatahubDataTypeConfigurationStringValue.mjs.map
+//# sourceMappingURL=DatahubDataTypeConfigurationImageValue.mjs.map

@@ -12,7 +12,7 @@ const ACol = window["ActindoCoreUI"].ACol;
 const ACheckbox = window["ActindoCoreUI"].ACheckbox;
 const ATextField = window["ActindoCoreUI"].ATextField;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
-  __name: "DatahubDataTypeConfigurationStringValue",
+  __name: "DatahubDataTypeConfigurationTextField",
   props: _mergeModels({
     attribute: {},
     dataTypeInstance: {},
@@ -21,9 +21,11 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     readonly: { type: Boolean }
   }, {
     "modelValue": {
-      set: ({ max, min, ...rest }) => ({
+      set: ({ max, min, rows, isEditor, ...rest }) => ({
         max: Number(max),
         min: Number(min),
+        rows: Number(rows),
+        isEditor: Boolean(isEditor),
         ...rest
       })
     }
@@ -63,8 +65,21 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
             _createVNode(_unref(ATextField), {
+              modelValue: configuration.value.rows,
+              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => configuration.value.rows = $event),
+              modelModifiers: { number: true },
+              label: _ctx.$t("textField.rows"),
+              type: "number",
+              readonly: _ctx.readonly
+            }, null, 8, ["modelValue", "label", "readonly"])
+          ]),
+          _: 1
+        }),
+        _createVNode(_unref(ACol), null, {
+          default: _withCtx(() => [
+            _createVNode(_unref(ATextField), {
               modelValue: configuration.value.regex,
-              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => configuration.value.regex = $event),
+              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => configuration.value.regex = $event),
               label: _ctx.$t("stringValue.regex"),
               readonly: _ctx.readonly
             }, null, 8, ["modelValue", "label", "readonly"])
@@ -74,8 +89,19 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         _createVNode(_unref(ACol), null, {
           default: _withCtx(() => [
             _createVNode(_unref(ACheckbox), {
+              modelValue: configuration.value.isEditor,
+              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => configuration.value.isEditor = $event),
+              label: _ctx.$t("textField.isEditor"),
+              readonly: _ctx.readonly
+            }, null, 8, ["modelValue", "label", "readonly"])
+          ]),
+          _: 1
+        }),
+        _createVNode(_unref(ACol), null, {
+          default: _withCtx(() => [
+            _createVNode(_unref(ACheckbox), {
               modelValue: configuration.value.readOnly,
-              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => configuration.value.readOnly = $event),
+              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => configuration.value.readOnly = $event),
               label: _ctx.$t("stringValue.readOnly"),
               readonly: _ctx.readonly
             }, null, 8, ["modelValue", "label", "readonly"])
@@ -84,7 +110,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
         }),
         _createVNode(_sfc_main$1, {
           modelValue: configuration.value.badwords,
-          "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => configuration.value.badwords = $event),
+          "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => configuration.value.badwords = $event),
           scopable: ((_a = _ctx.attribute) == null ? void 0 : _a.scopable) ?? _ctx.dataTypeInstance.scopable,
           "remote-scopes": _ctx.remoteScopes,
           "multi-language": ((_b = _ctx.attribute) == null ? void 0 : _b.multilanguage) ?? _ctx.dataTypeInstance.multilanguage,
@@ -98,4 +124,4 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
 export {
   _sfc_main as default
 };
-//# sourceMappingURL=DatahubDataTypeConfigurationStringValue.mjs.map
+//# sourceMappingURL=DatahubDataTypeConfigurationTextField.mjs.map
