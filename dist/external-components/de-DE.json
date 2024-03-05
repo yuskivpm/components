@@ -31,12 +31,6 @@
       "rows": "Zeilen",
       "isEditor": "HTML-Editor"
     },
-//    "floatValue": {
-//      "errorEnterNumber": "Bitte geben Sie eine Zahl ein",
-//      "minMaxAutoValidation": "TODO: must be between {min} and {max}",
-//      "minAutoValidation": "TODO: must be greater than {min}",
-//      "maxAutoValidation": "TODO: must be lower than {max}"
-//    },
     "stringValue": {
       "configurationHeading": "Konfiguration",
       "precision": "Präzision",

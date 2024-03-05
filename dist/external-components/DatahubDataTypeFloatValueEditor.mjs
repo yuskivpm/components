@@ -61,7 +61,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     return (_ctx, _cache) => {
       var _a, _b;
       return _openBlock(), _createElementBlock(_Fragment, null, [
-        _createTextVNode(_toDisplayString(_unref(t)("minMaxAutoValidation", { min: 1, max: 100 })) + " ", 1),
+        _createTextVNode(_toDisplayString(_unref(t)("datahub-plugin.numbers.minMaxAutoValidation", { min: 1, max: 100 })) + " ", 1),
         _createVNode(_unref(ATextField), {
           modelValue: localData.value,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => localData.value = $event),
