@@ -1,4 +1,4 @@
-import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-BmdO0vWX.mjs";
+import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-DamvDhDc.mjs";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -583,15 +583,16 @@ const clonedeep = /* @__PURE__ */ getDefaultExportFromCjs(lodash_clonedeepExport
 const _useModel = window["Vue"].useModel;
 const _mergeModels = window["Vue"].mergeModels;
 const _defineComponent = window["Vue"].defineComponent;
+const _unref = window["Vue"].unref;
 const _toDisplayString = window["Vue"].toDisplayString;
 const _createTextVNode = window["Vue"].createTextVNode;
-const _unref = window["Vue"].unref;
 const _withCtx = window["Vue"].withCtx;
 const _createVNode = window["Vue"].createVNode;
 const _openBlock = window["Vue"].openBlock;
 const _createBlock = window["Vue"].createBlock;
 const _createCommentVNode = window["Vue"].createCommentVNode;
 const onMounted = window["Vue"].onMounted;
+const useI18n = window["VueI18n"].useI18n;
 const ARow = window["ActindoCoreUI"].ARow;
 const ACol = window["ActindoCoreUI"].ACol;
 const AContainer = window["ActindoCoreUI"].AContainer;
@@ -612,6 +613,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
   setup(__props) {
     const props = __props;
     const configuration = _useModel(__props, "modelValue");
+    const { t } = useI18n();
     onMounted(() => {
       var _a;
       if (!configuration.value) {
@@ -627,7 +629,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
             default: _withCtx(() => [
               _createVNode(_unref(ACol), { class: "form-title text-body-2" }, {
                 default: _withCtx(() => [
-                  _createTextVNode(_toDisplayString(_ctx.$t("datahub-plugin.stringValue.configurationHeading")), 1)
+                  _createTextVNode(_toDisplayString(_unref(t)("datahub-plugin.config.configurationHeading")), 1)
                 ]),
                 _: 1
               }),
@@ -651,6 +653,37 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     };
   }
 });
+function block0(Component) {
+  const _Component = Component;
+  _Component.__i18n = _Component.__i18n || [];
+  _Component.__i18n.push({
+    "locale": "",
+    "resource": {
+      "en": {
+        "datahub-plugin": {
+          "config": {
+            "configurationHeading": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Configuration"]);
+            }
+          }
+        }
+      },
+      "de": {
+        "datahub-plugin": {
+          "config": {
+            "configurationHeading": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Konfiguration"]);
+            }
+          }
+        }
+      }
+    }
+  });
+}
+if (typeof block0 === "function")
+  block0(_sfc_main);
 export {
   _sfc_main as default
 };

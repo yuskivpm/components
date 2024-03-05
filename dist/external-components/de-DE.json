@@ -1,35 +1,8 @@
 {
   "datahub-plugin": {
-    "treeView": {
-      "flat": "Flach",
-      "multiSelect": "Mehrfachauswahl",
-      "levelN": "Ebene {level}"
-    },
-    "offerRelationValue": {
-      "minRelations": "Min Beziehungen",
-      "maxRelations": "Max Beziehungen"
-    },
-    "images": {
-      "prefixField": "Feld für Dateinamenspräfix",
-      "prefixHint": "Zum Beispiel 'id'. Ein hochgeladenes Bild wird dann von 'image1.jpg' in '442_image1.jpg' umbenannt, gegeben eine Entitäts-ID von 442. Zum Beispiel wenn sich Bilder nebeneinander in einer Ordnerstruktur befinden",
-      "minImages": "Min Anzahl Bilder",
-      "maxImages": "Max Anzahl Bilder",
-      "supportedFileTypes": "Erlaubte Dateierweiterungen",
-      "supportedFileTypesHint": "Zum Beispiel 'jpg'"
-    },
-    "simplePricing": {
-      "isGross": "Bruttopreise",
-      "msrp": "Zeige UVP-Feld",
-      "promotions": "Nutze Promotionen",
-      "currency": "Währung"
-    },
     "unitValue": {
       "dimension": "Dimension",
       "defaultUnit": "Standard-Einheit"
-    },
-    "textField": {
-      "rows": "Zeilen",
-      "isEditor": "HTML-Editor"
     },
     "stringValue": {
       "configurationHeading": "Konfiguration",

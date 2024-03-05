@@ -1,42 +1,5 @@
 {
   "datahub-plugin": {
-    "treeView": {
-      "flat": "Flat",
-      "multiSelect": "Multi select",
-      "levelN": "Level {level}"
-    },
-    "offerRelationValue": {
-      "minRelations": "Min relations",
-      "maxRelations": "Max relations"
-    },
-    "images": {
-      "prefixField": "Field for filename prefix",
-      "prefixHint": "For example 'id'. An uploaded image will then be renamed from 'image1.jpg' to '442_image1.jpg' given an entity id of 442. For example, images are next to each other in a folder structure",
-      "minImages": "Min number of images",
-      "maxImages": "Max number of images",
-      "supportedFileTypes": "Allowed file extensions",
-      "supportedFileTypesHint": "For example 'jpg'"
-    },
-    "simplePricing": {
-      "isGross": "Gross prices",
-      "msrp": "Show MSRP field",
-      "promotions": "Use Promotions",
-      "currency": "Currency"
-    },
-    "unitValue": {
-      "dimension": "Dimension",
-      "defaultUnit": "Default unit"
-    },
-    "textField": {
-      "rows": "Rows",
-      "isEditor": "HTML Editor"
-    },
-//    "floatValue": {
-//      "errorEnterNumber": "You must enter a number",
-//      "minMaxAutoValidation": "must be between {min} and {max}",
-//      "minAutoValidation": "must be greater than {min}",
-//      "maxAutoValidation": "must be lower than {max}"
-//    },
     "stringValue": {
       "configurationHeading": "Configuration",
       "precision": "Precision",

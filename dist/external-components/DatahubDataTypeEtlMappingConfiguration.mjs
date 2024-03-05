@@ -3,21 +3,21 @@
   try {
     if (typeof document != "undefined") {
       var elementStyle = document.createElement("style");
-      elementStyle.appendChild(document.createTextNode(".mapping__config[data-v-ae84dd42] {\n  background-color: rgb(var(--v-theme-selected));\n}"));
+      elementStyle.appendChild(document.createTextNode(".mapping__config[data-v-b8442b1c] {\n  background-color: rgb(var(--v-theme-selected));\n}"));
       document.head.appendChild(elementStyle);
     }
   } catch (e) {
     console.error("vite-plugin-css-injected-by-js", e);
   }
 })();
-import { l as loadExternalComponent } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-BmdO0vWX.mjs";
+import { l as loadExternalComponent } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-DamvDhDc.mjs";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper-1tPrXgE0.mjs";
 const _useModel = window["Vue"].useModel;
 const _mergeModels = window["Vue"].mergeModels;
 const _defineComponent = window["Vue"].defineComponent;
+const _unref = window["Vue"].unref;
 const _toDisplayString = window["Vue"].toDisplayString;
 const _createElementVNode = window["Vue"].createElementVNode;
-const _unref = window["Vue"].unref;
 const _createVNode = window["Vue"].createVNode;
 const _openBlock = window["Vue"].openBlock;
 const _createElementBlock = window["Vue"].createElementBlock;
@@ -32,6 +32,7 @@ const _hoisted_2 = { class: "d-flex" };
 const _hoisted_3 = { class: "flex-grow-1 text-truncate" };
 const computed = window["Vue"].computed;
 const watch = window["Vue"].watch;
+const useI18n = window["VueI18n"].useI18n;
 const ABtn = window["ActindoCoreUI"].ABtn;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
   __name: "DatahubDataTypeEtlMappingConfiguration",
@@ -49,6 +50,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     const props = __props;
     const isVisible = _useModel(__props, "modelValue");
     const configuration = _useModel(__props, "config");
+    const { t } = useI18n();
     const RequestedComponent = computed(() => {
       var _a;
       if (!((_a = props.extension) == null ? void 0 : _a.configurationComponent)) {
@@ -69,7 +71,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     return (_ctx, _cache) => {
       return RequestedComponent.value && isVisible.value ? (_openBlock(), _createElementBlock("div", _hoisted_1, [
         _createElementVNode("h2", _hoisted_2, [
-          _createElementVNode("span", _hoisted_3, _toDisplayString(_ctx.$t("elt.configuration")), 1),
+          _createElementVNode("span", _hoisted_3, _toDisplayString(_unref(t)("datahub-plugin.elt-config.configuration")), 1),
           _createVNode(_unref(ABtn), {
             icon: "clear",
             variant: "text",
@@ -86,7 +88,38 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     };
   }
 });
-const DatahubDataTypeEtlMappingConfiguration = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-ae84dd42"]]);
+function block0(Component) {
+  const _Component = Component;
+  _Component.__i18n = _Component.__i18n || [];
+  _Component.__i18n.push({
+    "locale": "",
+    "resource": {
+      "en": {
+        "datahub-plugin": {
+          "elt-config": {
+            "configuration": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Configuration"]);
+            }
+          }
+        }
+      },
+      "de": {
+        "datahub-plugin": {
+          "elt-config": {
+            "configuration": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["TODO: Configuration"]);
+            }
+          }
+        }
+      }
+    }
+  });
+}
+if (typeof block0 === "function")
+  block0(_sfc_main);
+const DatahubDataTypeEtlMappingConfiguration = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-b8442b1c"]]);
 export {
   DatahubDataTypeEtlMappingConfiguration as default
 };
