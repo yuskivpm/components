@@ -1,5 +1,5 @@
-import { D as DATAHUB_COMPONENT_TYPE } from "./constants-9833f845.mjs";
-import { _ as _sfc_main$1 } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-d6579160.mjs";
+import { D as DATAHUB_COMPONENT_TYPE } from "./DatahubDataTypeDateTimeValueConfiguration.vue_vue_type_script_setup_true_lang-Zkx86JXe.mjs";
+import { _ as _sfc_main$1 } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-DKJ0yFrL.mjs";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -598,14 +598,16 @@ const ACol = window["ActindoCoreUI"].ACol;
 const AContainer = window["ActindoCoreUI"].AContainer;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
   __name: "DatahubDataTypeConfiguration",
-  props: _mergeModels({
+  props: /* @__PURE__ */ _mergeModels({
     attribute: {},
     dataTypeInstance: {},
     remoteScopes: {},
     remoteLanguages: {},
+    remoteAttributes: {},
     readonly: { type: Boolean }
   }, {
-    "modelValue": {}
+    "modelValue": {},
+    "modelModifiers": {}
   }),
   emits: ["update:modelValue"],
   setup(__props) {
@@ -626,7 +628,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
             default: _withCtx(() => [
               _createVNode(_unref(ACol), { class: "form-title text-body-2" }, {
                 default: _withCtx(() => [
-                  _createTextVNode(_toDisplayString(_ctx.$t("stringValue.configurationHeading")), 1)
+                  _createTextVNode(_toDisplayString(_ctx.$t("datahub-plugin.stringValue.configurationHeading")), 1)
                 ]),
                 _: 1
               }),
@@ -638,8 +640,9 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 "data-type-instance": _ctx.dataTypeInstance,
                 "remote-scopes": _ctx.remoteScopes,
                 "remote-languages": _ctx.remoteLanguages,
+                "remote-attributes": _ctx.remoteAttributes,
                 readonly: _ctx.readonly
-              }, null, 8, ["modelValue", "type", "attribute", "data-type-instance", "remote-scopes", "remote-languages", "readonly"])
+              }, null, 8, ["modelValue", "type", "attribute", "data-type-instance", "remote-scopes", "remote-languages", "remote-attributes", "readonly"])
             ]),
             _: 1
           })) : _createCommentVNode("", true)

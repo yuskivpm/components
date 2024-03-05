@@ -1,20 +1,91 @@
 {
-  "lang-scopes": {
-    "scopes": "Selected channels:",
-    "languages": "Selected languages:",
-    "showAll": "Show all"
-  },
-  "stringValue": {
-    "configurationHeading": "Configuration",
-    "precision": "Precision",
-    "minLength": "Min length",
-    "maxLength": "Max length",
-    "regex": "Regex",
-    "readOnly": "Read only",
-    "addWord": "Add word",
-    "badWords": "Bad Words",
-    "scope": "Scope",
-    "language": "Language",
-    "wrongScopeLanguage": "Please select a valid scope and language combination to edit bad words"
+  "datahub-plugin": {
+    "etl": {
+      "Concat": {
+        "Glue": "Verbinder"
+      },
+      "BooleanToString": {
+        "TrueValueContent": "Inhalt wenn gechecked",
+        "FalseValueContent": "Inhalt wenn nicht gechecked"
+      },
+      "StringToNumber": {
+        "separator": "TODO: separator",
+        "emptyString": "TODO: Empty string"
+      }
+    },
+    "treeView": {
+      "flat": "Flach",
+      "multiSelect": "Mehrfachauswahl",
+      "levelN": "Ebene {level}"
+    },
+    "offerRelationValue": {
+      "minRelations": "Min Beziehungen",
+      "maxRelations": "Max Beziehungen"
+    },
+    "files": {
+      "prefixField": "Feld für Dateinamenspräfix",
+      "prefixHint": "Zum Beispiel 'id'. Eine hochgeladene Datei wird dann von 'doc.pdf' in '442_doc.pdf' umbenannt, gegeben eine Entitäts-ID von 442. Zum Beispiel wenn sich Produktdateien nebeneinander in einer Ordnerstruktur befinden",
+      "minFiles": "Min Anzahl Dateien",
+      "maxFiles": "Max Anzahl Dateien",
+      "supportedFileTypes": "Erlaubte Dateierweiterungen",
+      "supportedFileTypesHint": "Zum Beispiel 'pdf'"
+    },
+    "images": {
+      "prefixField": "Feld für Dateinamenspräfix",
+      "prefixHint": "Zum Beispiel 'id'. Ein hochgeladenes Bild wird dann von 'image1.jpg' in '442_image1.jpg' umbenannt, gegeben eine Entitäts-ID von 442. Zum Beispiel wenn sich Bilder nebeneinander in einer Ordnerstruktur befinden",
+      "minImages": "Min Anzahl Bilder",
+      "maxImages": "Max Anzahl Bilder",
+      "supportedFileTypes": "Erlaubte Dateierweiterungen",
+      "supportedFileTypesHint": "Zum Beispiel 'jpg'"
+    },
+    "simplePricing": {
+      "isGross": "Bruttopreise",
+      "msrp": "Zeige UVP-Feld",
+      "promotions": "Nutze Promotionen",
+      "currency": "Währung"
+    },
+    "unitValue": {
+      "dimension": "Dimension",
+      "defaultUnit": "Standard-Einheit"
+    },
+    "textField": {
+      "rows": "Zeilen",
+      "isEditor": "HTML-Editor"
+    },
+    "dateTime": {
+      "dateFormat": "Datumsformat",
+      "timeFormat": "Zeitformat",
+      "dateFormatNone": "Datum nicht anzeigen",
+      "dateFormatShort": "Kurz (z.B. 02.11.2019)",
+      "dateFormatMedium": "Mittel (z.B. 11. Februar 2019)",
+      "dateFormatLong": "Lang (z.B. Montag, 11. Februar 2019)",
+      "timeFormatNone": "Zeit nicht anzeigen",
+      "timeFormatShort": "Kurz (z.B. 21:00 Uhr)",
+      "timeFormatMedium": "Mittel (z.B. 21:00:00 Uhr)",
+      "date-time-value": {
+        "date_short": "DD.MM.YYYY",
+        "date_medium": "DD. MMMM YYYY",
+        "date_long": "dddd, DD. MMMM YYYY",
+        "time_short": "HH:mm",
+        "time_medium": "HH:mm:ss"
+      }
+    },
+    "doubleFloat": {
+      "separator": "Trennzeichen"
+    },
+    "floatValue": {
+      "errorEnterNumber": "Bitte geben Sie eine Zahl ein",
+      "minMaxAutoValidation": "TODO: must be between {min} and {max}",
+      "minAutoValidation": "TODO: must be greater than {min}",
+      "maxAutoValidation": "TODO: must be lower than {max}"
+    },
+    "stringValue": {
+      "configurationHeading": "Konfiguration",
+      "precision": "Präzision",
+      "minLength": "Min Länge",
+      "maxLength": "Max Länge",
+      "regex": "Regex",
+      "readOnly": "Schreibgeschützt"
+    }
   }
 }
