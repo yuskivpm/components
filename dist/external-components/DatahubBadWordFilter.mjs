@@ -21,9 +21,9 @@ const _createElementVNode = window["Vue"].createElementVNode;
 const _openBlock = window["Vue"].openBlock;
 const _createBlock = window["Vue"].createBlock;
 const _createCommentVNode = window["Vue"].createCommentVNode;
+const _createTextVNode = window["Vue"].createTextVNode;
 const _withCtx = window["Vue"].withCtx;
 const _createVNode = window["Vue"].createVNode;
-const _createTextVNode = window["Vue"].createTextVNode;
 const _Fragment = window["Vue"].Fragment;
 const _createElementBlock = window["Vue"].createElementBlock;
 const _mergeProps = window["Vue"].mergeProps;
@@ -56,7 +56,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
   emits: ["update:modelValue"],
   setup(__props) {
     const props = __props;
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
     const badwords = _useModel(__props, "modelValue");
     const currentScopeId = ref(0);
     const currentLanguageId = ref(0);
@@ -107,6 +107,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 class: "d-flex align-center"
               }, {
                 default: _withCtx(() => [
+                  _createTextVNode(" Local " + _toDisplayString(_unref(locale)) + " ", 1),
                   _createElementVNode("strong", _hoisted_1, _toDisplayString(_unref(t)("datahub-plugin.stringValue.badWords")), 1),
                   _ctx.scopable && _ctx.remoteScopes.length ? (_openBlock(), _createBlock(_unref(ASelect), {
                     key: 0,
