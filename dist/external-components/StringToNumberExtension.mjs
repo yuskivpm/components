@@ -3,7 +3,7 @@
   try {
     if (typeof document != "undefined") {
       var elementStyle = document.createElement("style");
-      elementStyle.appendChild(document.createTextNode(".extension-config[data-v-9aad21ee] {\n  gap: 8px;\n}\n.extension-config__input[data-v-9aad21ee] {\n  width: 500px;\n}"));
+      elementStyle.appendChild(document.createTextNode(".extension-config[data-v-fc5b6aec] {\n  gap: 8px;\n}\n.extension-config__input[data-v-fc5b6aec] {\n  width: 500px;\n}"));
       document.head.appendChild(elementStyle);
     }
   } catch (e) {
@@ -21,6 +21,7 @@ const _createElementBlock = window["Vue"].createElementBlock;
 window["Vue"].pushScopeId;
 window["Vue"].popScopeId;
 const _hoisted_1 = { class: "extension-config d-flex flex-wrap" };
+const useI18n = window["VueI18n"].useI18n;
 const ASelect = window["ActindoCoreUI"].ASelect;
 const _sfc_main = /* @__PURE__ */ _defineComponent({
   __name: "StringToNumberExtension",
@@ -33,6 +34,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
   emits: ["update:modelValue"],
   setup(__props) {
     const configuration = _useModel(__props, "modelValue");
+    const { t } = useI18n();
     const separatorItems = [
       { title: ",", value: "," },
       { title: ".", value: "." }
@@ -47,21 +49,64 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
           modelValue: configuration.value.separator,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => configuration.value.separator = $event),
           items: separatorItems,
-          label: _ctx.$t("datahub-plugin.etl.StringToNumber.separator"),
+          label: _unref(t)("datahub-plugin.etl.StringToNumber.separator"),
           class: "extension-config__input"
         }, null, 8, ["modelValue", "label"]),
         _createVNode(_unref(ASelect), {
           modelValue: configuration.value.emptyString,
           "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => configuration.value.emptyString = $event),
           items: emptyStringItems,
-          label: _ctx.$t("datahub-plugin.etl.StringToNumber.emptyString"),
+          label: _unref(t)("datahub-plugin.etl.StringToNumber.emptyString"),
           class: "extension-config__input"
         }, null, 8, ["modelValue", "label"])
       ]);
     };
   }
 });
-const StringToNumberExtension = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-9aad21ee"]]);
+function block0(Component) {
+  const _Component = Component;
+  _Component.__i18n = _Component.__i18n || [];
+  _Component.__i18n.push({
+    "locale": "",
+    "resource": {
+      "en": {
+        "datahub-plugin": {
+          "etl": {
+            "StringToNumber": {
+              "separator": (ctx) => {
+                const { normalize: _normalize } = ctx;
+                return _normalize(["separator"]);
+              },
+              "emptyString": (ctx) => {
+                const { normalize: _normalize } = ctx;
+                return _normalize(["Empty string"]);
+              }
+            }
+          }
+        }
+      },
+      "de": {
+        "datahub-plugin": {
+          "etl": {
+            "StringToNumber": {
+              "separator": (ctx) => {
+                const { normalize: _normalize } = ctx;
+                return _normalize(["TODO: separator"]);
+              },
+              "emptyString": (ctx) => {
+                const { normalize: _normalize } = ctx;
+                return _normalize(["TODO: Empty string"]);
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+}
+if (typeof block0 === "function")
+  block0(_sfc_main);
+const StringToNumberExtension = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-fc5b6aec"]]);
 export {
   StringToNumberExtension as default
 };

@@ -1,18 +1,5 @@
 {
   "datahub-plugin": {
-    "etl": {
-      "Concat": {
-        "Glue": "Glue"
-      },
-      "BooleanToString": {
-        "TrueValueContent": "Content for value true",
-        "FalseValueContent": "Content for value false"
-      },
-      "StringToNumber": {
-        "separator": "separator",
-        "emptyString": "Empty string"
-      }
-    },
     "treeView": {
       "flat": "Flat",
       "multiSelect": "Multi select",
@@ -21,14 +8,6 @@
     "offerRelationValue": {
       "minRelations": "Min relations",
       "maxRelations": "Max relations"
-    },
-    "files": {
-      "prefixField": "Field for filename prefix",
-      "prefixHint": "For example 'id'. An uploaded file will then be renamed from 'doc.pdf' to '442_doc.pdf' given an entity id of 442. For example, product files are next to each other in a folder structure",
-      "minFiles": "Min number of files",
-      "maxFiles": "Max number of files",
-      "supportedFileTypes": "Allowed file extensions",
-      "supportedFileTypesHint": "For example 'pdf'"
     },
     "images": {
       "prefixField": "Field for filename prefix",
@@ -52,15 +31,12 @@
       "rows": "Rows",
       "isEditor": "HTML Editor"
     },
-    "doubleFloat": {
-      "separator": "Separator"
-    },
-    "floatValue": {
-      "errorEnterNumber": "You must enter a number",
-      "minMaxAutoValidation": "must be between {min} and {max}",
-      "minAutoValidation": "must be greater than {min}",
-      "maxAutoValidation": "must be lower than {max}"
-    },
+//    "floatValue": {
+//      "errorEnterNumber": "You must enter a number",
+//      "minMaxAutoValidation": "must be between {min} and {max}",
+//      "minAutoValidation": "must be greater than {min}",
+//      "maxAutoValidation": "must be lower than {max}"
+//    },
     "stringValue": {
       "configurationHeading": "Configuration",
       "precision": "Precision",

@@ -1,4 +1,4 @@
-import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-CuHT_S4a.mjs";
+import { _ as _sfc_main$1, D as DATAHUB_COMPONENT_TYPE } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-BmdO0vWX.mjs";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;

@@ -1,18 +1,5 @@
 {
   "datahub-plugin": {
-    "etl": {
-      "Concat": {
-        "Glue": "Verbinder"
-      },
-      "BooleanToString": {
-        "TrueValueContent": "Inhalt wenn gechecked",
-        "FalseValueContent": "Inhalt wenn nicht gechecked"
-      },
-      "StringToNumber": {
-        "separator": "TODO: separator",
-        "emptyString": "TODO: Empty string"
-      }
-    },
     "treeView": {
       "flat": "Flach",
       "multiSelect": "Mehrfachauswahl",
@@ -21,14 +8,6 @@
     "offerRelationValue": {
       "minRelations": "Min Beziehungen",
       "maxRelations": "Max Beziehungen"
-    },
-    "files": {
-      "prefixField": "Feld für Dateinamenspräfix",
-      "prefixHint": "Zum Beispiel 'id'. Eine hochgeladene Datei wird dann von 'doc.pdf' in '442_doc.pdf' umbenannt, gegeben eine Entitäts-ID von 442. Zum Beispiel wenn sich Produktdateien nebeneinander in einer Ordnerstruktur befinden",
-      "minFiles": "Min Anzahl Dateien",
-      "maxFiles": "Max Anzahl Dateien",
-      "supportedFileTypes": "Erlaubte Dateierweiterungen",
-      "supportedFileTypesHint": "Zum Beispiel 'pdf'"
     },
     "images": {
       "prefixField": "Feld für Dateinamenspräfix",
@@ -52,15 +31,12 @@
       "rows": "Zeilen",
       "isEditor": "HTML-Editor"
     },
-    "doubleFloat": {
-      "separator": "Trennzeichen"
-    },
-    "floatValue": {
-      "errorEnterNumber": "Bitte geben Sie eine Zahl ein",
-      "minMaxAutoValidation": "TODO: must be between {min} and {max}",
-      "minAutoValidation": "TODO: must be greater than {min}",
-      "maxAutoValidation": "TODO: must be lower than {max}"
-    },
+//    "floatValue": {
+//      "errorEnterNumber": "Bitte geben Sie eine Zahl ein",
+//      "minMaxAutoValidation": "TODO: must be between {min} and {max}",
+//      "minAutoValidation": "TODO: must be greater than {min}",
+//      "maxAutoValidation": "TODO: must be lower than {max}"
+//    },
     "stringValue": {
       "configurationHeading": "Konfiguration",
       "precision": "Präzision",

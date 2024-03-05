@@ -28,8 +28,6 @@ const _Fragment = window["Vue"].Fragment;
 const _createElementBlock = window["Vue"].createElementBlock;
 const _mergeProps = window["Vue"].mergeProps;
 const _hoisted_1 = { class: "mr-2" };
-const _hoisted_2 = { class: "mr-2" };
-const _hoisted_3 = { class: "mr-2" };
 const computed = window["Vue"].computed;
 const ref = window["Vue"].ref;
 const watch = window["Vue"].watch;
@@ -109,9 +107,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 class: "d-flex align-center"
               }, {
                 default: _withCtx(() => [
-                  _createElementVNode("strong", _hoisted_1, _toDisplayString(_unref(t)("common.mandatoryField")), 1),
-                  _createElementVNode("strong", _hoisted_2, _toDisplayString(_unref(t)("LoginForm.authRequestCancelled")), 1),
-                  _createElementVNode("strong", _hoisted_3, _toDisplayString(_unref(t)("datahub-plugin.stringValue.badWords")), 1),
+                  _createElementVNode("strong", _hoisted_1, _toDisplayString(_unref(t)("datahub-plugin.stringValue.badWords")), 1),
                   _ctx.scopable && _ctx.remoteScopes.length ? (_openBlock(), _createBlock(_unref(ASelect), {
                     key: 0,
                     modelValue: currentScopeId.value,
