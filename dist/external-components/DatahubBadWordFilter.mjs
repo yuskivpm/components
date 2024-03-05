@@ -208,26 +208,28 @@ function block0(Component) {
         }
       },
       "de": {
-        "stringValue": {
-          "badWords": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Unerwünschte Wörter"]);
-          },
-          "scope": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Kanal"]);
-          },
-          "language": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Sprache"]);
-          },
-          "wrongScopeLanguage": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Bitte wählen Sie eine gültige Kanal- und Sprachkombination aus, um unerwünschte Wörter zu bearbeiten"]);
-          },
-          "addWord": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Wort hinzufügen"]);
+        "datahub-plugin": {
+          "stringValue": {
+            "badWords": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Unerwünschte Wörter"]);
+            },
+            "scope": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Kanal"]);
+            },
+            "language": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Sprache"]);
+            },
+            "wrongScopeLanguage": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Bitte wählen Sie eine gültige Kanal- und Sprachkombination aus, um unerwünschte Wörter zu bearbeiten"]);
+            },
+            "addWord": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Wort hinzufügen"]);
+            }
           }
         }
       },
@@ -258,26 +260,28 @@ function block0(Component) {
         }
       },
       "de-DE": {
-        "stringValue": {
-          "badWords": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Unerwünschte Wörter"]);
-          },
-          "scope": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Kanal"]);
-          },
-          "language": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Sprache"]);
-          },
-          "wrongScopeLanguage": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Bitte wählen Sie eine gültige Kanal- und Sprachkombination aus, um unerwünschte Wörter zu bearbeiten"]);
-          },
-          "addWord": (ctx) => {
-            const { normalize: _normalize } = ctx;
-            return _normalize(["Wort hinzufügen"]);
+        "datahub-plugin": {
+          "stringValue": {
+            "badWords": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Unerwünschte Wörter"]);
+            },
+            "scope": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Kanal"]);
+            },
+            "language": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Sprache"]);
+            },
+            "wrongScopeLanguage": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Bitte wählen Sie eine gültige Kanal- und Sprachkombination aus, um unerwünschte Wörter zu bearbeiten"]);
+            },
+            "addWord": (ctx) => {
+              const { normalize: _normalize } = ctx;
+              return _normalize(["Wort hinzufügen"]);
+            }
           }
         }
       }
