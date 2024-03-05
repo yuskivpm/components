@@ -52,24 +52,6 @@
       "rows": "Zeilen",
       "isEditor": "HTML-Editor"
     },
-    "dateTime": {
-      "dateFormat": "Datumsformat",
-      "timeFormat": "Zeitformat",
-      "dateFormatNone": "Datum nicht anzeigen",
-      "dateFormatShort": "Kurz (z.B. 02.11.2019)",
-      "dateFormatMedium": "Mittel (z.B. 11. Februar 2019)",
-      "dateFormatLong": "Lang (z.B. Montag, 11. Februar 2019)",
-      "timeFormatNone": "Zeit nicht anzeigen",
-      "timeFormatShort": "Kurz (z.B. 21:00 Uhr)",
-      "timeFormatMedium": "Mittel (z.B. 21:00:00 Uhr)",
-      "date-time-value": {
-        "date_short": "DD.MM.YYYY",
-        "date_medium": "DD. MMMM YYYY",
-        "date_long": "dddd, DD. MMMM YYYY",
-        "time_short": "HH:mm",
-        "time_medium": "HH:mm:ss"
-      }
-    },
     "doubleFloat": {
       "separator": "Trennzeichen"
     },

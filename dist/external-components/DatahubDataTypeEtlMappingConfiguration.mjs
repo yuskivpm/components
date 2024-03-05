@@ -10,7 +10,7 @@
     console.error("vite-plugin-css-injected-by-js", e);
   }
 })();
-import { l as loadExternalComponent } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-DKJ0yFrL.mjs";
+import { l as loadExternalComponent } from "./DatahubExternalComponent.vue_vue_type_script_setup_true_lang-CuHT_S4a.mjs";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper-1tPrXgE0.mjs";
 const _useModel = window["Vue"].useModel;
 const _mergeModels = window["Vue"].mergeModels;
